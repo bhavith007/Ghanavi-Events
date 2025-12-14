@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg-dark: #0f0f0f;
+}
+
+html,body,#root{height:100%;}
+
+body{
+  background: var(--bg-dark);
+}
+
+.glass { background-color: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.08); }
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.5; }
+}
+
+/* Confetti animations - 12 particles in different directions */
+@keyframes confetti-1 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(-35px, -40px) rotate(360deg) scale(0); opacity: 0; }
+}
+
+@keyframes confetti-2 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(25px, -45px) rotate(-360deg) scale(0); opacity: 0; }
+}
+
+@keyframes confetti-3 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(40px, -20px) rotate(180deg) scale(0); opacity: 0; }
+}
+
+@keyframes confetti-4 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(45px, 15px) rotate(-180deg) scale(0); opacity: 0; }
+}
+
+@keyframes confetti-5 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(30px, 40px) rotate(360deg) scale(0); opacity: 0; }
+}
+
+@keyframes confetti-6 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(-15px, 45px) rotate(-360deg) scale(0); opacity: 0; }
+}
+
+@keyframes confetti-7 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(-40px, 25px) rotate(180deg) scale(0); opacity: 0; }
+}
+
+@keyframes confetti-8 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(-45px, -10px) rotate(-180deg) scale(0); opacity: 0; }
+}
+
+@keyframes confetti-9 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(0px, -50px) rotate(360deg) scale(0); opacity: 0; }
+}
+
+@keyframes confetti-10 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(50px, 0px) rotate(-360deg) scale(0); opacity: 0; }
+}
+
+@keyframes confetti-11 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(-50px, 0px) rotate(180deg) scale(0); opacity: 0; }
+}
+
+@keyframes confetti-12 {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translate(20px, 50px) rotate(-180deg) scale(0); opacity: 0; }
+}
