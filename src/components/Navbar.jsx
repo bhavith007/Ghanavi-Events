@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react'
 export default function Navbar(){
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState('home')
+  const [showFallbackLogo, setShowFallbackLogo] = useState(false)
   const links = ['Home','About','Services','Gallery','Contact']
 
   useEffect(() => {
@@ -29,7 +30,17 @@ export default function Navbar(){
   return (
     <header className="fixed w-full top-4 z-40 pointer-events-none px-4">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between glass rounded-2xl shadow-2xl backdrop-blur-lg pointer-events-auto">
-        <a href="#home" onClick={()=>setActive('home')} className="text-gold font-playfair text-2xl hover:text-gold-dim transition-colors cursor-pointer">Ghanavi Events</a>
+        <a href="#home" onClick={()=>setActive('home')} className="hover:text-gold-dim transition-colors cursor-pointer inline-flex items-center gap-3 p-1 md:p-2">
+          {!showFallbackLogo && (
+            <img src="/logo.png" alt="Ghanavi Events" onError={() => setShowFallbackLogo(true)} className="h-12 md:h-16 w-auto object-contain block" />
+          )}
+          {showFallbackLogo && (
+            <svg width="56" height="56" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="block">
+              <circle cx="50" cy="50" r="48" fill="#D4AF37" />
+              <text x="50%" y="58%" textAnchor="middle" fontFamily="Playfair Display, serif" fontSize="44" fill="#071014">G</text>
+            </svg>
+          )}
+        </a>
         <nav className="hidden md:flex gap-6 items-center">
           {links.map(l=> <a key={l} href={`#${l.toLowerCase()}`} onClick={()=>setActive(l.toLowerCase())} className={`hover:text-gold-dim rounded-md px-2 py-1 transition-colors ${active === l.toLowerCase() ? 'text-gold font-semibold' : ''}`}>{l}</a>)}
         </nav>

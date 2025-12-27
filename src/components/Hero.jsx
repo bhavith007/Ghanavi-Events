@@ -13,7 +13,7 @@ export default function Hero(){
   }, [])
 
   return (
-    <section id="home" className="h-screen flex items-center justify-center relative overflow-hidden bg-dark">
+    <section id="home" className="h-screen flex items-center justify-center relative overflow-hidden bg-dark md:items-start md:pt-28">
       <div 
         className={`absolute inset-0 bg-cover bg-center transition-opacity duration-500 ${bgLoaded ? 'opacity-40' : 'opacity-0'}`}
         style={{ backgroundImage: "url('/hero1.png')" }}
@@ -52,7 +52,7 @@ export default function Hero(){
           initial={{scale:0.8, opacity:0}} 
           animate={{scale:1, opacity:1}} 
           transition={{delay:0.8, duration:1.4, ease:[0.22, 1, 0.36, 1]}} 
-          className="mt-48 md:mt-40 flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="mt-12 md:mt-20 flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <a href="#contact" className="group px-8 py-3 bg-gold text-dark font-semibold rounded-full hover:bg-gold-dim transition-all duration-700 transform hover:scale-105 relative overflow-hidden">
             <span className="relative z-10">Plan Your Event</span>

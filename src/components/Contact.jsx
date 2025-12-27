@@ -39,7 +39,7 @@ export default function Contact(){
             href={`https://wa.me/${site.phones[0].replace(/[^0-9]/g, '')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-3 px-8 py-4 bg-gold text-dark rounded-full hover:bg-gold-dim transition-all duration-700 font-semibold shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:shadow-[0_0_40px_rgba(212,175,55,0.5)] transform hover:scale-105 relative overflow-hidden"
+            className="group flex items-center gap-3 px-6 py-4 bg-gold text-dark rounded-full hover:bg-gold-dim transition-all duration-700 font-semibold shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:shadow-[0_0_40px_rgba(212,175,55,0.5)] transform hover:scale-105 relative overflow-hidden"
           >
             <span className="relative z-10 flex items-center gap-3">
               <MessageCircle className="w-5 h-5" />

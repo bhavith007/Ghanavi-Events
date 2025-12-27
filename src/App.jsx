@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import GalleryPage from './pages/GalleryPage'
+import FloatingWhatsApp from './components/FloatingWhatsApp'
 
 export default function App(){
   return (
@@ -10,6 +11,7 @@ export default function App(){
         <Route path="/" element={<HomePage />} />
         <Route path="/gallery/:folderKey" element={<GalleryPage />} />
       </Routes>
+      <FloatingWhatsApp />
     </Router>
   )
 }
