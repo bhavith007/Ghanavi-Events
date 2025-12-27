@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 export default function Hero(){
+  const [bgLoaded, setBgLoaded] = useState(false)
+
+  useEffect(() => {
+    const img = new Image()
+    img.src = '/hero1.png'
+    img.onload = () => setBgLoaded(true)
+    // Start loading regardless of result
+    setTimeout(() => setBgLoaded(true), 3000) // fallback after 3 seconds
+  }, [])
+
   return (
     <section id="home" className="h-screen flex items-center justify-center relative overflow-hidden bg-dark">
-      <div className="absolute inset-0 bg-[url('/hero1.png')] bg-cover bg-center opacity-40" />
+      <div 
+        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-500 ${bgLoaded ? 'opacity-40' : 'opacity-0'}`}
+        style={{ backgroundImage: "url('/hero1.png')" }}
+      />
+      
+      {/* Skeleton/placeholder while loading */}
+      {!bgLoaded && (
+        <div className="absolute inset-0 bg-gradient-to-b from-dark/50 via-dark/50 to-dark/50 animate-pulse" />
+      )}
       
       {/* Subtle top-down gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/30 to-dark/80" />

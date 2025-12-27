@@ -1,3 +1,15 @@
+export const galleryFolders = [
+  { id: 1, name: 'Reception', key: 'reception', description: 'Grand reception events' },
+  { id: 2, name: 'Baby Shower', key: 'baby-shower', description: 'Sweet baby shower moments' },
+  { id: 3, name: 'Mehendi Ceremony', key: 'mehendi-ceremony', description: 'Colorful mehendi celebrations' },
+  { id: 4, name: 'Chappara', key: 'chappara', description: 'Traditional setups' },
+  { id: 5, name: 'Office Events', key: 'office-events', description: 'Corporate gatherings' },
+  { id: 6, name: 'Balloon Decoration', key: 'balloon-decoration', description: 'Creative decorations' },
+  { id: 7, name: 'Engagement', key: 'engagement', description: 'Elegant engagement celebrations' },
+  { id: 8, name: 'Naming Ceremony', key: 'naming-ceremony', description: 'Traditional naming events' },
+  { id: 9, name: 'Door Decoration', key: 'door-decoration', description: 'Elegant door designs' },
+]
+
 export const site = {
   name: 'Ghanavi Events',
   owner: 'Manjunath R',
